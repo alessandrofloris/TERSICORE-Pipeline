@@ -53,3 +53,4 @@ config.py  # Or a more specific name if you have a dedicated secrets file
 htmlcov/
 .coverage
 results/
+images/
