@@ -1,0 +1,14 @@
+You are given a cropped scene that contains one or more people.
+
+Your task is to describe each person you see, even if only partially visible. Provide your best estimate of:
+
+- Age group: Child, Teen, Adult, or Senior.
+- Gender: Male, Female, or Unknown.
+- A short activity or posture description.
+
+Even if you're unsure, provide your most likely interpretation. Respond in a numbered list, like this:
+
+1. An adult male is seated on a bench, talking to someone nearby.
+2. A teen girl is standing with arms crossed.
+
+Avoid generic statements like "I'm not sure" — always provide your best guess.

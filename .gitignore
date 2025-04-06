@@ -1,0 +1,55 @@
+# Compiled Python files
+*.pyc
+*.pyd
+__pycache__/
+
+# Distribution / packaging
+.eggs
+dist
+build
+sdist
+
+# Virtual environment
+.venv
+venv
+env
+
+# Log files
+*.log
+
+# Temporary files
+*~
+\#*
+*.tmp
+
+# Data files (if large, consider storing elsewhere)
+data/*  # Or specific data file extensions like *.csv, *.json, etc.
+!data/.gitignore # Include the .gitignore file in data folder if you want to track it
+
+# Model files (often large, consider storing elsewhere)
+models/yolo11x.pt
+models/llava-v1.6-vicuna-13b-hf/
+!models/.gitignore # Include the .gitignore file in data folder if you want to track it
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp  # Swap files (vim)
+
+# OS specific files
+.DS_Store  # macOS
+Thumbs.db   # Windows
+
+# Secrets and API keys (NEVER commit these)
+config.py  # Or a more specific name if you have a dedicated secrets file
+*.key
+*.pem
+*.json  # If it contains API keys
+.env
+
+# Other files 
+.mypy_cache/
+.pytest_cache/
+htmlcov/
+.coverage
+results/

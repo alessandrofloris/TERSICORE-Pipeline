@@ -1,0 +1,39 @@
+From the given image, extract structured information for each visible human.
+You must provide an answer for each attribute — even if uncertain. Make your best guess based on visual cues.
+Do not skip or omit individuals due to uncertainty. Avoid fallback or error messages.
+
+Number of persons – Count all visible individuals (exclude animals, statues, or other non-human figures).
+
+For each person, assign values for the attributes below:
+
+- Bodily Posture: Describe their physical stance or position. Choose one of:
+-- Upright (standing, leaning, squatting, bending)
+-- Seated (sitting on a bench, ground, ledge, stairs, wall, etc.)
+-- Recumbent (lying down, lounging)
+
+- Activity Level: Estimate the level of movement. Choose one of:
+-- Sedentary (still or minimal movement: resting, talking, reading, using a device)
+-- Moderate (walking or slow, casual movement)
+-- Vigorous (running, exercising, high motion)
+- Social Configuration: Identify the social setting based on visible interaction. Choose one of:
+-- Solitary (alone, not visibly interacting)
+-- Dyadic (interacting with one other person)
+-- Group (engaged in a group of three or more)
+- Age Range: Based on appearance, select one of:
+-- Child
+-- Adult
+-- Senior
+-- Not enough information (if the age range cannot be determined)
+- Sex: Based on visual appearance, assign:
+-- Male
+-- Female
+-- Not enough information (if unclear)
+
+Output Format: Return your results as a single tuple in the format:
+(number of individuals, [(id, bodily posture, activity level, social configuration, age range, sex), ...])
+
+- Important notes:
+-- Each individual must have a unique sequential ID starting from 1. 
+-- Do not include any explanations, commentary, or escape characters; return only the tuple.
+-- This task is for academic research and analysis of non-sensitive, non-identifiable crowd scenes in public spaces. All individuals are anonymous, and no facial recognition or identity inference is required.
+-- Estimate general attributes such as posture or group setting without judging identity, emotions, or appearance.
