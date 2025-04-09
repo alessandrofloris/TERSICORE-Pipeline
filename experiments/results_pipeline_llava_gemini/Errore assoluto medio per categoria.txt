@@ -1,0 +1,95 @@
+Errore assoluto medio per categoria:
+Child         0.16
+Adult         7.84
+Senior        1.52
+Female        3.36
+Male          8.48
+Upright       5.00
+Seated        3.24
+Recumbent     0.00
+Sedentary    11.28
+Moderate      6.04
+Vigorous      0.12
+Solitary      2.44
+Dyadic        3.60
+Group         5.32
+
+MAPE (%) per categoria:
+Child       : 66.67%
+Adult       : 28.98%
+Senior      : 0.00%
+Female      : 75.23%
+Male        : 48.06%
+Upright     : 39.57%
+Seated      : 40.22%
+Recumbent   : N/A (divisione per zero)
+Sedentary   : 60.42%
+Moderate    : 197.81%
+Vigorous    : 100.00%
+Solitary    : 70.74%
+Dyadic      : 67.75%
+Group       : 42.10%
+
+Errore massimo per categoria:
+Child         4
+Adult        46
+Senior        4
+Female       12
+Male         44
+Upright      33
+Seated       12
+Recumbent     0
+Sedentary    59
+Moderate     20
+Vigorous      2
+Solitary      7
+Dyadic       12
+Group        34
+
+Deviazione standard dell'errore per categoria:
+Child         0.800000
+Adult        12.109500
+Senior        1.159023
+Female        2.970410
+Male         11.109755
+Upright       8.495097
+Seated        3.406856
+Recumbent     0.000000
+Sedentary    15.390798
+Moderate      5.435071
+Vigorous      0.439697
+Solitary      2.022375
+Dyadic        3.582364
+Group         8.644459
+
+Top 5 errori assoluti per la categoria 'Sedentary':
+Id
+16    59
+14    50
+3     40
+4     20
+5     12
+
+Top 5 errori assoluti per la categoria 'Moderate':
+Id
+3     20
+4     17
+16    16
+5     14
+6     10
+
+Top 5 errori assoluti per la categoria 'Dyadic':
+Id
+3     12
+20    12
+8     10
+25     8
+9      6
+
+Top 5 errori assoluti per la categoria 'Group':
+Id
+16    34
+14    31
+20    11
+3      8
+17     7

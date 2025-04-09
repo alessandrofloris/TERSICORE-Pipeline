@@ -35,22 +35,22 @@ def process_image(image_path):
     descriptions = llava.generate_descriptions(cropped_images)
 
     # 5. Generate GPT descriptions
-    descriptions = gpt.generate_descriptions(cropped_images)
+    #descriptions = gpt.generate_descriptions(cropped_images)
 
     # 6. Merge MLLM outputs
     merged_description = str(descriptions)
 
     # 7. Get person information from Gemini API
-    #person_info = gemini_api.get_person_info(merged_description) 
+    person_info = gemini_api.get_person_info(merged_description) 
     
     # 7. Get person information from GPT API
-    person_info = gpt.get_person_info(merged_description)
+    #person_info = gpt.get_person_info(merged_description)
 
     filename_result = image_filename.replace(".JPG", "_results.json")
     utils.save_results_as_json(config.GPT_PROMPT_IMAGE, config.GPT_PROMPT_DESCRIPTION, merged_description, person_info, config.RESULTS_FOLDER_PATH + filename_result)
 
 if __name__ == "__main__":
     
-    for i in range(14, 15):
+    for i in range(1, 26):
         image_path = config.IMAGE_FOLDER_PATH + str(i) + ".JPG"
         process_image(image_path)

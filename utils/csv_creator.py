@@ -53,7 +53,7 @@ def create_csv(results, universal_keys, filename="output.csv"):
     
     with open(filename, "w", newline="") as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow(header)  # Scrivi l'intestazione
+        writer.writerow(header)
         
         for id_img, n_individuals, counter in results:
             counter["NEI Age"] = n_individuals - (counter.get("Child", 0) + counter.get("Adult", 0) + counter.get("Senior", 0))
@@ -79,4 +79,4 @@ if __name__ == "__main__":
                 id_img, n_individuals, counter = extract_info(i, output)
                 results.append((id_img, n_individuals, counter))
     
-    create_csv(results, universal_keys)
+    create_csv(results, universal_keys, "counts-modello.csv")

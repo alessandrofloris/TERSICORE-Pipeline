@@ -1,0 +1,62 @@
+From the given image, extract structured information for each visible human.
+
+You must assign a value for every attribute, for every person — no exceptions.
+If the information is unclear or ambiguous, you must still make a best-guess estimate based on visual cues.
+
+Do not skip individuals. Do not respond with fallback messages such as "not enough information" or "uncertain."
+
+---
+
+Number of Persons: Count all visible humans in the image. Exclude animals, statues, or mannequins.
+
+For each individual, assign values for the following attributes. Choose the most likely category for each, even if you are not fully certain:
+
+- **Bodily Posture**: 
+  - Upright (standing, leaning, squatting, bending)
+  - Seated (sitting on a bench, ground, ledge, stairs, wall, etc.)
+  - Recumbent (lying down, lounging)
+
+- **Activity Level**: 
+  - Sedentary (still or minimal movement: resting, talking, reading, using a device)
+  - Moderate (walking or slow, casual movement)
+  - Vigorous (running, exercising, high motion)
+
+- **Social Configuration**: 
+  - Solitary (alone, not visibly interacting)
+  - Dyadic (interacting with one other person)
+  - Group (engaged in a group of three or more)
+
+- **Age Range** (best estimate based on body proportions, hair, clothing, etc.):
+  - Child
+  - Adult
+  - Senior
+
+- **Sex** (best estimate based on overall appearance, hairstyle, clothing, etc.):
+  - Male
+  - Female
+
+---
+
+**Output Format**: Return your answer as a single tuple:
+(number of individuals, [(id, bodily posture, activity level, social configuration, age range, sex), ...])
+
+**Schema Reminder**:
+Each person must be described by a tuple of exactly six fields in the following order:
+(id, bodily posture, activity level, social configuration, age range, sex)
+
+**Examples**:
+- If the image contains 1 person:
+Output → (1, [(1, 'Seated', 'Sedentary', 'Solitary', 'Adult', 'Female')])
+
+- If the image contains 3 people:
+Output → (3, [(1, 'Upright, 'Moderate', 'Group', 'Adult', 'Male'), (2, 'Upright', 'Moderate', 'Group', 'Adult', 'Female'), (3, 'Seated', 'Sedentary', 'Solitary', 'Senior', 'Female')])
+
+Do not change the order or swap attributes between fields.
+
+Guidelines:
+- Each individual must have a unique sequential ID starting from 1.
+- Do not include explanations, comments, or line breaks. Return only the tuple.
+- Do not use any placeholders like "Not enough information" or "Unknown".
+- Do not use escape characters.
+
+This task is for academic research in public spaces. All individuals are anonymous and non-identifiable.
